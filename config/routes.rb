@@ -1,3 +1,7 @@
 CharitaBull::Application.routes.draw do
-  root :to => 'welcome#index'
+  resources :faq
+  resources :contact
+  resources :about
+
+  root :to => 'about#index'
 end
