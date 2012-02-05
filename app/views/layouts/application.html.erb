@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CharitaBull</title>
+  <title>Chicago Charity Vote 2012</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -10,32 +10,25 @@
   <div class="topbar">
     <div class="topbar-inner">
       <div class="container">
-        <h3><%= link_to "CharitaBull", "/" %></h3>
+        <div class="span6 offset3">
+          <h3><%= link_to "Chicago Charity Vote", "/" %></h3>
+        </div>
         <ul class="nav">
-          <li><%= link_to "Link1", "/path1"  %></li>
-          <li><%= link_to "Link2", "/path2"  %></li>
-          <li><%= link_to "Link3", "/path3"  %></li>
+          <li><%= link_to "Charity1", "/path1"  %></li>
+          <li><%= link_to "Charity2", "/path2"  %></li>
         </ul>
       </div>
     </div>
   </div>
   <div class="container">
     <div class="content">
+        <%= yield %>
       <div class="row">
-        <div class="span11">
-          <%= yield %>
-        </div>
-        <div class="span1">&nbsp;</div>
-        <div class="span4">
-          <h3>Sidebar</h3>
-          <ul>
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
-          </ul>
-        </div>
+        <div class="span4">beep beep</div>
+        <div class="span4">beep beep</div>
       </div>
     </div>
+   </div>
   </div>
-</body>
+ </body>
 </html>
