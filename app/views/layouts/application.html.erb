@@ -23,6 +23,7 @@
         $('#vote-form').submit();
         return false;
       })});
+
   </script>
 
   <% unless flash[:notice].blank? %>
@@ -35,7 +36,9 @@
     <div class="topbar-inner">
       <div class="container">
         <div class="span12">
-          <h3><center><img style="padding-bottom: 20px" class="displayed" src="/ChicagoCharityVote.png" /></center></h3>
+          <%= link_to(:controller => :welcome, :action => :index) do %>
+            <h3><center><img style="padding-bottom: 20px" class="displayed" src="/ChicagoCharityVote.png" /></center></h3>
+          <% end %>
         </div>
          <div class="row"> <center>
             <div class="span12"> <a href="/about"> <img src="/about.jpg" /></a>
