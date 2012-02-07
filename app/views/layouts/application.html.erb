@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body style="">
+<body >
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -26,6 +26,10 @@
 
   </script>
 
+  <script>
+    $('.tabs').button()
+  </script>
+
   <% unless flash[:notice].blank? %>
     <div class="alert" style="margin 0; position: absolute; width: 100%; background-color: #38D; color: white;">
       <%= content_tag :div, flash[:notice] %>
@@ -35,21 +39,55 @@
   <div class="topbar">
     <div class="topbar-inner">
       <div class="container">
-        <div class="span12">
+
+<div class="row span12">
+        <div class="span4" align="left" style="margin:5px 0px 0px 0px">
+          <style type="text/css">#fx_convert_1 br {display:none;}</style>
+          <div style="width:190px;text-align:center;" id="fx_convert_1">
+          <div id="xcolorc1_1" style="border:1px solid #000;background-color:#3891E0;padding: 0px 0px;margin: 0px 0px;align:center;overflow:hidden;">
+          <div id="xcolorc1_2" style="font-size:12px;color:#183a00;line-height:16px;font-family: arial; font-weight:bold;background:#3891E0;padding: 3px 1px;text-align:center;">
+          <a href="/welcome" alt="Don't forget to donate!" title="Don't forget to donate!" id="xcount_link1" style="color:#FFFFFF;font-size:14px;text-decoration:none;line-height:16px;font-family: arial;" >Time Left to Vote</a>
+            </div>
+          <div id="xcount1_1660436793" style="font-size: 1em;font-family: arial; font-weight:bold"></div>
+          <script src="http://www.freecountdown.net/z.php?text=&t=1&fd=2012-02-15&dir=down&id=1_1660436793&fc=FFFFFF"></script>
+            </div>
+            </div>         
+          </div>
+
+        <div class="span4" align="center" style="margin:0px 10px">
+          <img style="width: 430px" src="/booth.png">
+        </div>
+
+        <div class="span4" align="right" style="margin-right:-9px">       
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+         <input type="hidden" name="cmd" value="_donations">
+         <input type="hidden" name="business" value="chicagocharityvote@chicagobooth.edu">
+         <input type="hidden" name="lc" value="US">
+         <input type="hidden" name="item_name" value="Chicago Charity Vote">
+         <input type="hidden" name="no_note" value="0">
+         <input type="hidden" name="currency_code" value="USD">
+         <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
+         <input type="image" src="/donate1.jpeg" border="0" style="height:65%; width:65%" name="submit" alt="PayPal - The safer, easier way to pay online!">
+         <img alt="" border="0" src="/donate1.jpeg" width="2" height="2">
+           </form>
+        </div>
+
+</div>
+
+         <div class="span12">
           <%= link_to(:controller => :welcome, :action => :index) do %>
-            <h3><center><img style="padding: 40px 0 20px 0" class="displayed" src="/ChicagoCharityVote.png" /></center></h3>
+            <h3><center><img style="padding: 0px 0 20px 0; margin:-13px 0 0 0" width="100%" class="displayed" src="/ChicagoCharityVote.png" /></center></h3>
           <% end %>
         </div>
-<center>
-<div align="center" style="margin:15px 0px 0px 0px"> <noscript> <div align="center" style="width:140px;border:1px solid #ccc; background: #3388DD; color: #F9F9FF;font-weight:bold;font-size:12px;"> <a style="text-decoration: none; color:#F9F9FF;" href="http://mycountdown.org/My_Countdown/My_Countdown/">My Countdown </a></div> </noscript> <script type="text/javascript" src="http://mycountdown.org/countdown.php?cp3_Hex=0F0200&cp2_Hex=3388DD&cp1_Hex=F9F9FF&ham=0&img=&hbg=0&hfg=0&sid=0&fwdt=150&lab=1&text1=voting closes!&text2=Voting closes&group=My Countdown&countdown=My Countdown&widget_number=3010&event_time=1329307200&timezone=America/Chicago"></script> </div>
-</center>
-         <div class="row"> <center>
-            <div class="span12"> <a href="/about"> <img src="/about.jpg" /></a>
-         <a href="/contact"> <img src="contact.jpg" /></a>
-         <a href="/faq"> <img src="/faq.jpg" /></a>
-       </div>
-       </center>
-   </div>
+
+<div align="center" style="margin:15px 0px 0px 0px" class="span12">
+        <a href="/about"> <img src="/about.jpg"> </a>
+        <a href="/contact"> <img src="/contact.jpg"></a>
+        <a href="/faq"> <img src="/faq.jpg"></a>
+</div>
+
+         
+
     </div>
       </div>
     </div>
@@ -69,8 +107,8 @@
 <input type="hidden" name="no_note" value="0">
 <input type="hidden" name="currency_code" value="USD">
 <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
-<input type="image" src="/donate.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="/donate.jpg" width="2" height="2">
+<input type="image" src="/donate.jpeg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="/donate.jpeg" width="2" height="2">
 </form>
    </center>   
     <div class="offset5"> <center>
