@@ -35,5 +35,5 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'ruby-debug19', :require => 'ruby-debug', :group => :development
 gem "twitter-bootstrap-rails", "~> 2.0rc0", :group => :assets

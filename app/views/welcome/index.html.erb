@@ -1,10 +1,31 @@
-      <div class="row">
-        <div style="padding-top: 20px" class="span4"><center> <img src="sue dunc1.jpg" /></center> </div>
-        <div style="padding-top: 20px" class="span4"><center> <img src="minds matter logo.jpg" /></center> </div>
-        <div style="padding-top: 20px" class="span4"><center> <img src="sue dunc1.jpg" /></center> </div>
-      </div>
-      <div class="row">
-        <div class="span4"> The Sue Duncan Children’s Center (SDCC) is housed in Jackie Robinson Elementary School on the city’s southeast side.  SDCC aims to foster the academic growth and achievement of its students.  <%= link_to "Read more about all our charities...", "/about"  %> </div>
-        <div class="span4"> Minds Matter is a nationally recognized not-for-profit serving high-achieving, low-income students in cities across the United States.  <%= link_to "Read more about all of our charities...", "/about"  %> </div>
-        <div class="span4"> abcdef ghijklmnopqrstu vwxyz akjhg akfjghdkfgjh sdkjhsdjfhkfhg sakdjfhdgfh awekjhdlkfhldtg </div>
-      </div>
+<%= form_tag({:controller => "welcome", :action => "vote"}, :id => "vote-form") do %>
+  <%= hidden_field_tag("vote_value", nil, :id => "vote-value") %>
+  <div class="row">
+    <div style="padding-top: 20px" class="span4">
+      <center>
+        <a charityid="1">
+          <img src="sue dunc1.jpg"/>
+        </a>
+      </center>
+    </div>
+    <div style="padding-top: 20px" class="span4">
+      <center>
+        <a charityid="2">
+          <img src="minds matter logo.jpg"/>
+        </a>
+      </center>
+    </div>
+    <div style="padding-top: 20px" class="span4">
+      <center>
+        <a charityid="3">
+          <img src="sue dunc1.jpg"/>
+        </a>
+      </center>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span4"> The Sue Duncan Children’s Center (SDCC) is housed in Jackie Robinson Elementary School on the city’s southeast side.  SDCC aims to foster the academic growth and achievement of its students.  <%= link_to "Read more about all our charities...", "/about"  %> </div>
+    <div class="span4"> Minds Matter is a nationally recognized not-for-profit serving high-achieving, low-income students in cities across the United States.  <%= link_to "Read more about all of our charities...", "/about"  %> </div>
+    <div class="span4"> abcdef ghijklmnopqrstu vwxyz akjhg akfjghdkfgjh sdkjhsdjfhkfhg sakdjfhdgfh awekjhdlkfhldtg </div>
+  </div>
+<% end %>
