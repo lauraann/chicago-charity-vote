@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body style="padding-top: 40px">
+<body style="">
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -27,7 +27,7 @@
   </script>
 
   <% unless flash[:notice].blank? %>
-    <div class="alert">
+    <div class="alert" style="margin 0; position: absolute; width: 100%; background-color: #69F; color: white;">
       <%= content_tag :div, flash[:notice] %>
     </div>
   <% end %>
@@ -37,7 +37,7 @@
       <div class="container">
         <div class="span12">
           <%= link_to(:controller => :welcome, :action => :index) do %>
-            <h3><center><img style="padding-bottom: 20px" class="displayed" src="/ChicagoCharityVote.png" /></center></h3>
+            <h3><center><img style="padding: 40px 0 20px 0" class="displayed" src="/ChicagoCharityVote.png" /></center></h3>
           <% end %>
         </div>
          <div class="row"> <center>
