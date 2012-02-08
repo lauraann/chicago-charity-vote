@@ -11,7 +11,7 @@
       Thanks for visiting!
       <a class="close" data-dismiss="modal">×</a>
     </div>
-    <div class="modal-body"><p>Welcome to Chicago Charity Vote. Please click the image of the charity you'd like to vote for. Donations are encouraged!</p></div>
+    <div class="modal-body"><p>Please vote by clicking on the logo of the charity you'd like to win!</p></div>
   </div>
 
 <% end %>
@@ -19,31 +19,40 @@
 <%= form_tag({:controller => "welcome", :action => "vote"}, :id => "vote-form") do %>
   <%= hidden_field_tag("vote_value", nil, :id => "vote-value") %>
   <div class="row">
-    <div style="padding-top: 20px" class="span4">
+    <div style="padding-top: 20px" class="span3">
       <center>
         <a charityid="1">
-          <img style="height: 200px; width: 200px" src="sue dunc1.jpg"/>
+          <img style="height: 150px; width: 150px" src="sue dunc1.jpg"/>
         </a>
       </center>
     </div>
-    <div style="padding-top: 20px" class="span4">
+    <div style="padding-top: 20px" class="span3">
       <center>
         <a charityid="2">
-          <img style="height: 200px; width: 200px" src="minds matter logo.jpg"/>
+          <img style="height: 150px; width: 150px" src="minds matter logo.jpg"/>
         </a>
       </center>
     </div>
-    <div style="padding-top: 20px" class="span4">
+    <div style="padding-top: 20px" class="span3">
       <center>
         <a charityid="3">
-          <img style="height: 200px; width: 200px" src="ceasefire.jpg"/>
+          <img style="height: 150px; width: 150px" src="ceasefire.jpg"/>
         </a>
       </center>
     </div>
+    <div style="padding-top: 20px" class="span3">
+      <center>
+        <a charityid="4">
+          <img style="height: 150px; width: 150px" src="bookwallah.jpg"/>
+        </a>
+      </center>
+    </div>
+
   </div>
   <div class="row">
-    <div class="span4" style="text-align: justify;"> The Sue Duncan Children’s Center (SDCC) is housed in Jackie Robinson Elementary School on the city’s southeast side.  SDCC aims to foster the academic growth and achievement of its students.  <%= link_to "Read more about all our charities...", "/about"  %> </div>
-    <div class="span4" style="text-align: justify;"> Minds Matter is a nationally recognized not-for-profit serving high-achieving, low-income students in cities across the United States.  <%= link_to "Read more about all of our charities...", "/about"  %> </div>
-    <div class="span4" style="text-align: justify;"> CeaseFire uses a public health model to stop shootings and killings, combining science and street outreach to track where violence is heating up and then cool the situation down.<%= link_to "Read more about all our charities...", "/about"  %> </div>
-  </div>
+    <div class="span3" style="text-align: justify;"> The Sue Duncan Children’s Center (SDCC) is housed in Jackie Robinson Elementary School on the city’s southeast side.  SDCC aims to foster the academic growth and achievement of its students.  <%= link_to "Read more about all our charities...", "/about"  %> </div>
+    <div class="span3" style="text-align: justify;"> Minds Matter is a nationally recognized not-for-profit serving high-achieving, low-income students in cities across the United States.  <%= link_to "Read more about all of our charities...", "/about"  %> </div>
+    <div class="span3" style="text-align: justify;"> CeaseFire uses a public health model to stop shootings and killings, combining science and street outreach to track where violence is heating up and then cool the situation down.<%= link_to "Read more about all our charities...", "/about"  %> </div>
+    <div class="span3" style="text-align: justify;"> Bookwallah is a 501(c)(3) non-profit organization whose vision is to transform the lives of children who have undergone hardship by sharing the gift of imagination. <%= link_to "Read more about all our charities...", "/about"  %> </div>
+ </div>
 <% end %>

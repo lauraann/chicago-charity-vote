@@ -31,7 +31,7 @@
   </script>
 
   <% unless flash[:notice].blank? %>
-    <div class="alert" style="margin 0; position: absolute; width: 100%; background-color: #38D; color: white;">
+    <div id="flash" class="alert" style="margin 0; width: 100%; background-color: #38D; color: white; border-bottom: 1px solid black;">
       <%= content_tag :div, flash[:notice] %>
     </div>
   <% end %>
